@@ -1,0 +1,7 @@
+Problem 2:
+c) There is a fairly linear region from log(N) = 0 to around log(N) = 3.2.
+
+Problem 3:
+d) There are two downward sloping linear regions towards the left (with some outliers). 
+
+The downward sum is generally more precise because n = N gives the smallest term in the series. When the smallest terms are added first, the number of times that roundoff error occurs is reduced.
