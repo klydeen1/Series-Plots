@@ -99,9 +99,6 @@ class PlotDataClass: NSObject, ObservableObject {
             
             
         }
-    
-    
-
 }
 
 
