@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		656CD71027AA396D0009DDE9 /* FiniteSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CD70F27AA396D0009DDE9 /* FiniteSum.swift */; };
 		656CD71127AA396D0009DDE9 /* FiniteSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CD70F27AA396D0009DDE9 /* FiniteSum.swift */; };
+		656CD71327AA3D7F0009DDE9 /* SimpleSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CD71227AA3D7F0009DDE9 /* SimpleSeries.swift */; };
+		656CD71427AA3D7F0009DDE9 /* SimpleSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656CD71227AA3D7F0009DDE9 /* SimpleSeries.swift */; };
 		D20740D725927AEB00EA5DF1 /* CalculatePlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20740D625927AEB00EA5DF1 /* CalculatePlotData.swift */; };
 		D20740D825927AEB00EA5DF1 /* CalculatePlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20740D625927AEB00EA5DF1 /* CalculatePlotData.swift */; };
 		D234921E258C07FA00CB3365 /* SwiftUICorePlotExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D234920B258C07F900CB3365 /* SwiftUICorePlotExampleApp.swift */; };
@@ -29,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		656CD70F27AA396D0009DDE9 /* FiniteSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiniteSum.swift; sourceTree = "<group>"; };
+		656CD71227AA3D7F0009DDE9 /* SimpleSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSeries.swift; sourceTree = "<group>"; };
 		D20740D625927AEB00EA5DF1 /* CalculatePlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePlotData.swift; sourceTree = "<group>"; };
 		D234920B258C07F900CB3365 /* SwiftUICorePlotExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICorePlotExampleApp.swift; sourceTree = "<group>"; };
 		D234920C258C07F900CB3365 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 				D2FD4CD8258E4EDD00C8451C /* ChangingPlotParameters.swift */,
 				D20740D625927AEB00EA5DF1 /* CalculatePlotData.swift */,
 				D234920B258C07F900CB3365 /* SwiftUICorePlotExampleApp.swift */,
+				656CD71227AA3D7F0009DDE9 /* SimpleSeries.swift */,
 				D234920D258C07FA00CB3365 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -232,6 +236,7 @@
 			files = (
 				D2349220258C07FA00CB3365 /* ContentView.swift in Sources */,
 				D20740D725927AEB00EA5DF1 /* CalculatePlotData.swift in Sources */,
+				656CD71327AA3D7F0009DDE9 /* SimpleSeries.swift in Sources */,
 				D2349243258C09F400CB3365 /* CorePlot.swift in Sources */,
 				D2FD4CD9258E4EDD00C8451C /* ChangingPlotParameters.swift in Sources */,
 				D234923E258C09CB00CB3365 /* PlotDataClass.swift in Sources */,
@@ -246,6 +251,7 @@
 			files = (
 				D2349221258C07FA00CB3365 /* ContentView.swift in Sources */,
 				D20740D825927AEB00EA5DF1 /* CalculatePlotData.swift in Sources */,
+				656CD71427AA3D7F0009DDE9 /* SimpleSeries.swift in Sources */,
 				D2349244258C09F400CB3365 /* CorePlot.swift in Sources */,
 				D2FD4CDA258E4EDD00C8451C /* ChangingPlotParameters.swift in Sources */,
 				D234923F258C09CB00CB3365 /* PlotDataClass.swift in Sources */,

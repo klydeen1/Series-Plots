@@ -64,7 +64,8 @@ class PlotDataClass: NSObject, ObservableObject {
     func plotFiniteSumError() {
         plotData = []
         @ObservedObject var sumModel = FiniteSum()
-        for N in stride(from: 1, to: 1000000, by: 1000) {
+        for logN in stride(from: 0, through: 6, by: 0.01) {
+            let N = Int(pow(10,logN))
             let relError = sumModel.calculateRelErrorS1(passedN: N)
             let y = Double(log10(Double(relError)))
             let x = Double(log10(Double(N)))
@@ -80,7 +81,30 @@ class PlotDataClass: NSObject, ObservableObject {
         changingPlotParameters.xLabel = "log(N)"
         changingPlotParameters.yLabel = "log(Relative error)"
         changingPlotParameters.lineColor = .red()
-        changingPlotParameters.title = "Log-log plot of relative error vs. number of terms"
+        changingPlotParameters.title = "Log-log plot of relative error vs. number of terms for the series in Landau ch. 2.1.2 problem 2"
+    }
+    
+    func plotSimpleSumError() {
+        plotData = []
+        @ObservedObject var sumModel = SimpleSeries()
+        for logN in stride(from: 0, through: 6, by: 0.01) {
+            let N = Int(pow(10,logN))
+            let relError = sumModel.calculateRelError(passedN: N)
+            let y = log10(Double(relError))
+            let x = log10(Double(N))
+            
+            let dataPoint: plotDataType = [.X: x, .Y: y]
+            plotData.append(dataPoint)
+        }
+        // Set the Plot Parameters
+        changingPlotParameters.yMax = -13.0
+        changingPlotParameters.yMin = -17.0
+        changingPlotParameters.xMax = 6.5
+        changingPlotParameters.xMin = -0.1
+        changingPlotParameters.xLabel = "log(N)"
+        changingPlotParameters.yLabel = "log(Relative error)"
+        changingPlotParameters.lineColor = .red()
+        changingPlotParameters.title = "Log-log plot of relative error vs. number of terms for the series in Landau ch. 2.1.2 problem 3"
     }
     
     func zeroData(){

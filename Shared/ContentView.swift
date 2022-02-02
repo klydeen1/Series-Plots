@@ -33,10 +33,10 @@ struct ContentView: View {
             Divider()
             
             HStack{
-                Button("Plot log-log of relative error vs. number of terms", action: {self.calculateRelError()} )
+                Button("Make log-log plot for problem 2", action: {self.calculateRelErrorProb2()} )
                 .padding()
                 
-                Button("Plot y = x", action: {self.calculateYEqualsX()} )
+                Button("Make log-log plot for problem 3", action: {self.calculateRelErrorProb3()} )
                 .padding()
                 
             }
@@ -62,13 +62,19 @@ struct ContentView: View {
         
     }
     
-    func calculateRelError() {
+    func calculateRelErrorProb2() {
         //pass the plotDataModel to the dataCalculator
         dataCalculator.plotDataModel = self.plotDataModel
         //Calculate the new plotting data and place in the plotDataModel
         dataCalculator.plotFiniteSumError()
     }
     
+    func calculateRelErrorProb3() {
+        //pass the plotDataModel to the dataCalculator
+        dataCalculator.plotDataModel = self.plotDataModel
+        //Calculate the new plotting data and place in the plotDataModel
+        dataCalculator.plotSimpleSumError()
+    }
 }
 
 /*struct ContentView_Previews: PreviewProvider {

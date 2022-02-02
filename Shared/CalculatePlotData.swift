@@ -94,15 +94,45 @@ class CalculatePlotData: ObservableObject {
         plotDataModel!.changingPlotParameters.xLabel = "log(N)"
         plotDataModel!.changingPlotParameters.yLabel = "log(Relative error)"
         plotDataModel!.changingPlotParameters.lineColor = .blue()
-        plotDataModel!.changingPlotParameters.title = "Log-log plot of relative error vs. number of terms"
+        plotDataModel!.changingPlotParameters.title = "Log-log plot of relative error vs. number of terms for the series in Landau ch. 2.1.2 problem 2"
 
         plotDataModel!.zeroData()
         var plotData :[plotDataType] =  []
         
         @ObservedObject var sumModel = FiniteSum()
-        for logN in stride(from: 0, to: 6, by: 0.01) {
+        for logN in stride(from: 0, through: 6, by: 0.01) {
             let N = Int(pow(10,logN))
             let relError = sumModel.calculateRelErrorS1(passedN: N)
+            let y = Double(log10(Double(relError)))
+            let x = Double(log10(Double(N)))
+            
+            let dataPoint: plotDataType = [.X: x, .Y: y]
+            plotData.append(contentsOf: [dataPoint])
+        }
+        
+        plotDataModel!.appendData(dataPoint: plotData)
+        
+        return
+    }
+    
+    func plotSimpleSumError() {
+        //set the Plot Parameters
+        plotDataModel!.changingPlotParameters.yMax = -13.0
+        plotDataModel!.changingPlotParameters.yMin = -17.0
+        plotDataModel!.changingPlotParameters.xMax = 6.5
+        plotDataModel!.changingPlotParameters.xMin = -0.1
+        plotDataModel!.changingPlotParameters.xLabel = "log(N)"
+        plotDataModel!.changingPlotParameters.yLabel = "log(Relative error)"
+        plotDataModel!.changingPlotParameters.lineColor = .blue()
+        plotDataModel!.changingPlotParameters.title = "Log-log plot of relative error vs. number of terms for the series in Landau ch. 2.1.2 problem 3"
+
+        plotDataModel!.zeroData()
+        var plotData :[plotDataType] =  []
+        
+        @ObservedObject var sumModel = SimpleSeries()
+        for logN in stride(from: 0, to: 6, by: 0.01) {
+            let N = Int(pow(10,logN))
+            let relError = sumModel.calculateRelError(passedN: N)
             let y = Double(log10(Double(relError)))
             let x = Double(log10(Double(N)))
             
